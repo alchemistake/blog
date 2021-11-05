@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Fixing my game addiction"
-date:   2021-10-29
+date:   2021-11-05T00:00:00Z
 categories: productivity
 ---
 I have a problem. I play too much Vidya Gaems. It is not a problem when I play a narative based single player game for fun but when I play something even remotely competitive I become a grustle focused Sigma. I can sink in 6-7 hours easily. Which turns my daily schedule upside down, and has a negative effect in my life. I'm playing until 2AM-3AM in the morning which makes me tired all day long. This gotta stop but I lack the willpower to not to do so. So I'll delegate willpower to a computer program.
