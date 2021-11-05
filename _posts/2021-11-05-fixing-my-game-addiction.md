@@ -7,7 +7,7 @@ categories: productivity
 I have a problem. I play too much Vidya Gaems. It is not a problem when I play a narative based single player game for fun but when I play something even remotely competitive I become a grustle focused Sigma. I can sink in 6-7 hours easily. Which turns my daily schedule upside down, and has a negative effect in my life. I'm playing until 2AM-3AM in the morning which makes me tired all day long. This gotta stop but I lack the willpower to not to do so. So I'll delegate willpower to a computer program.
 
 # Research
-So plan is to have 60 minutes everyday to play. I can decrease or increase based on the circumstances. There is 4 options I considered.
+So my main concern is to have 60 minutes everyday to play. I can decrease or increase based on the circumstances. There is 4 options I considered.
 
 ## DIY
 There is a feature of windows called "policy". You can setup those to block some certain applications from running. With some basic scripting I would be able to do it. It is free but hard to setup. If you are cash stripped it can be done. [You can continue your researche here.](https://www.technipages.com/prevent-users-from-running-certain-programs)
@@ -31,8 +31,15 @@ Freedom is a nice option but I don't need its extra bells and whistles. Thus it 
 # Setup
 After I acquired the software I needed to setup my block settings.
 ## Time and Allowance Setup
+I set up 00:00 to 00:00 block times in the weekdays and same hours for weekend. First block has 1 hour time allowance and the second block has 2 hours time allowance.
+![Weekdays](/assets/2021-11-05-fixing-my-game-addiction/weekdays.png)
+![Weekend](/assets/2021-11-05-fixing-my-game-addiction/weekend.png)
 
 ## Blocking Apps Setup
+Cold Turkey allow two types of block detection, one is direct `.exe` files, other is detecting `.exe` files on a folder. I suggest folder detection because sometimes games and launchers launch different `.exe` files then the one you have launched. I disabled Epic Games Store, Steam and Uplay.
+![Weekend](/assets/2021-11-05-fixing-my-game-addiction/apps.png)
+
 
 ## Problems
-For a strange reason Uplay creates a lot of notifications when it get's blocked. I think it might be just me having this problem but I think it can be solved by muting Cold Turkey notifications.
+For a strange reason Uplay creates a lot of notifications when it get's blocked. I think it might be just me having this problem but I think it can be solved by muting Cold Turkey notifications. Definitely Uplay is doing something problematic, it is not a Cold Turkey issue.
+![Weekend](/assets/2021-11-05-fixing-my-game-addiction/notifications.png)
