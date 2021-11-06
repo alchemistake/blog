@@ -3,6 +3,7 @@ layout: post
 title:  "A peculiar case of a home networking"
 date:   2021-11-06
 categories: home-server
+tags: networking
 ---
 I have a very unique and weird home server setup, I believe it will be interesting to tell about it. I'll run through I have configured my server.
 
