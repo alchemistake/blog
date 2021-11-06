@@ -32,8 +32,12 @@ Freedom is a nice option but I don't need its extra bells and whistles. Thus it 
 After I acquired the software I needed to setup my block settings.
 ## Time and Allowance Setup
 I set up 00:00 to 00:00 block times in the weekdays and same hours for weekend. First block has 1 hour time allowance and the second block has 2 hours time allowance.
+{% figure caption:"<center><i>Weekdays Setup</i></center>"%}
 ![Weekdays](/assets/2021-11-05-fixing-my-game-addiction/weekdays.png)
+{% endfigure %}
+{% figure caption:"<center><i>Weekend Setup</i></center>"%}
 ![Weekend](/assets/2021-11-05-fixing-my-game-addiction/weekend.png)
+{% endfigure %}
 
 ## Blocking Apps Setup
 Cold Turkey allow two types of block detection, one is direct `.exe` files, other is detecting `.exe` files on a folder. I suggest folder detection because sometimes games and launchers launch different `.exe` files then the one you have launched. I disabled Epic Games Store, Steam and Uplay.
