@@ -1,53 +1,86 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you: 
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
 # Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-
 title: Alche's Blog
-email: alchemistake@thrideas.com
-description: >- # this means to ignore newlines until "baseurl:"
-  I'm writing about stuff about I have done.
-baseurl: "/" # the subpath of your site, e.g. /blog
-url: "https://alche.thrideas.com"
-twitter_username: alchemistake
-github_username:  alchemistake
+description: >- # site description
+  I'm writing about stuff about what I have done.
+lang: en-US # default lang
+repo: https://github.com/alchemistake/blog # site repo [optional]
+mode: dark
+
+# Profile settings
+author:
+  name: Alchemistake # author name
+  bio: >- # tell to the world
+    I'm a bored engineer man.
+  username: alchemistake # general username
+  github: alchemistake # github username
+  twitter: alchemistake # twitter username
+  email: alchemistake@thrideas.com # email adress
+  avatar: /assets/img/avatar.jpg # change with your own avatar
+
+# URL settings
+url: "https://alche.thrideas.com" #
+baseurl: "/"
+# permalink: /:title/
+google_analytics: # leave it blank if not wish #TODO
+
+# Collection setting
+collections:
+  posts:
+    output: true
+
+# Markdown settings
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  syntax_highlighter: rouge
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: post
+      comments: false
+
+# Jekyll Compose default front matter
+jekyll_compose:
+  post_default_front_matter:
+    modified:
+    tags: []
+    description:
+  draft_default_front_matter:
+    modified:
+    tags: []
+    description:
+
+# Homepage limit posts
+number_of_posts: 10
 
 # Build settings
-theme: minima
+# theme: klise
+sass:
+  style: compressed
+
+include:
+  - _redirects
+  - .htaccess
+
+exclude:
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - CHANGELOG.md
+  - README.md
+  - node_modules
+  - CODE_OF_CONDUCT.md
+  - CONTRIBUTING.md
+  - lighthouse.png
+  - klise-*.gem
+  - klise.gemspec
+
+# Plugins
 plugins:
   - jekyll-feed
-
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+  - jekyll-sitemap
+  - jekyll-postfiles

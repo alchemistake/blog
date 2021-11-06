@@ -3,7 +3,7 @@ layout: post
 title:  "50 Pages Review #1: Bullshit Jobs"
 date:   2021-10-29
 categories: books
-tags: books 50pages
+tags: 50pages
 ---
 <img src="/assets/2021-10-29-50-pages-review-1-bullshit-jobs/cover.jpg" width="50%" style="display:block;margin-left:auto;margin-right:auto;">
 

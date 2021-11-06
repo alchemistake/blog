@@ -3,7 +3,7 @@ layout: post
 title:  "Ultimate Guide to Octo4a"
 date:   2021-10-10
 categories: 3d-printing
-tags: 3d-printing octo4a octoprint
+tags: octo4a octoprint
 ---
 The great person Gina Häußge created the Octoprint project, that allows you to control and monitor every aspect of your 3D printer and your printing jobs right from within your browser. People usually load it on a Raspberry Pi to use it but that is not the only way of using Octoprint.
 
