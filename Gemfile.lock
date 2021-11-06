@@ -42,6 +42,9 @@ GEM
       jekyll (>= 3.7, < 5.0)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
+    jgd (1.12)
+      jekyll (>= 1.5.1)
+      trollop (= 2.9.9)
     kramdown (2.3.1)
       rexml
     kramdown-parser-gfm (1.1.0)
@@ -64,6 +67,7 @@ GEM
       ffi (~> 1.9)
     terminal-table (1.8.0)
       unicode-display_width (~> 1.1, >= 1.1.1)
+    trollop (2.9.9)
     unicode-display_width (1.8.0)
 
 PLATFORMS
@@ -76,6 +80,7 @@ DEPENDENCIES
   jekyll-figure (~> 0.1.0)
   jekyll-postfiles (~> 3.1)
   jekyll-sitemap (~> 1.4)
+  jgd
 
 BUNDLED WITH
    2.2.29
