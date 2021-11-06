@@ -1,0 +1,31 @@
+[
+  
+    {
+      "title"    : "A peculiar case of a home networking",
+      "tags"     : "networking",
+      "url"      : "//home-server/2021/11/06/a-peculiar-case-of-a-home-networking.html",
+      "date"     : "2021-11-06 00:00:00 +0100"
+    } ,
+  
+    {
+      "title"    : "Fixing my game addiction",
+      "tags"     : "productivity",
+      "url"      : "//productivity/2021/11/05/fixing-my-game-addiction.html",
+      "date"     : "2021-11-05 01:00:00 +0100"
+    } ,
+  
+    {
+      "title"    : "50 Pages Review #1: Bullshit Jobs",
+      "tags"     : "50pages",
+      "url"      : "//books/2021/10/29/50-pages-review-1-bullshit-jobs.html",
+      "date"     : "2021-10-29 00:00:00 +0200"
+    } ,
+  
+    {
+      "title"    : "Ultimate Guide to Octo4a",
+      "tags"     : "octo4a, octoprint",
+      "url"      : "//3d-printing/2021/10/10/ultimate-guide-to-octo4a.html",
+      "date"     : "2021-10-10 00:00:00 +0200"
+    } 
+  
+]

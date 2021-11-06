@@ -1,0 +1,5 @@
+- [ ] heading levels are not captured
+- [ ] Too much spaces in some places, need to edit padding
+- [ ] I need to integrate alchemistake.github.io and this website together.
+- [ ] I need to change the favicon
+- [ ] Google Analytics Setup
