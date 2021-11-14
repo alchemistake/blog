@@ -1,6 +1,13 @@
 [
   
     {
+      "title"    : "One of those weeks",
+      "tags"     : "networking",
+      "url"      : "//home-server/2021/11/14/one-of-those-weeks.html",
+      "date"     : "2021-11-14 17:46:00 +0100"
+    } ,
+  
+    {
       "title"    : "A peculiar case of a home networking",
       "tags"     : "networking",
       "url"      : "//home-server/2021/11/06/a-peculiar-case-of-a-home-networking.html",
