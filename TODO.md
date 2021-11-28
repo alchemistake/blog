@@ -3,3 +3,4 @@
 - [ ] I need to integrate alchemistake.github.io and this website together.
 - [ ] I need to change the favicon
 - [ ] Google Analytics Setup
+- [ ] Better image handling
