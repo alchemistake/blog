@@ -2,6 +2,8 @@
 layout: post
 title: '50 Pages Review #2: How Luck Happens'
 date: 2021-11-20 16:16 +0100
+categories: books
+tags: 50pages
 ---
 <img src="/assets/2021-11-20-50-pages-review-2-how-luck-happens/cover.jpg" width="50%" style="display:block;margin-left:auto;margin-right:auto;">
 
