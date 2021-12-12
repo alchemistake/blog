@@ -50,10 +50,11 @@ I decided to follow some tutorials and installed them on my home server to test 
 
 # Thursday
 ## P3 Steel
-### What is P3 Steel
 > The P3Steel is a remix of Twelvepro's redesign of Josef Prusa's i3.
 > Leonardo - the prototype P3Steel printer - was designed and built by Irobri in April 2013, after attending a local Maker show in Zaragoza, Spain.
 > The main frame structure, built from laser-cut 3mm steel, is extremely strong and simple to assemble, and eliminates the need for several printed parts due to the use of steel parts instead of threaded rods for the "Y" subframe (as in the original Prusa i3 and many of its variants).<sup>[Source](https://reprap.org/wiki/P3Steel)</sup>
+
+
 ### Why do I want to learn it?
 I bought a kit for P3 Steel back in 2018 for around 100$. The unbelievable price bit me in the arse multiple times after I realized the kit is half-built and lacks a lot of features. After buying and building Ender 3 V2, I decided to revive the P3 Steel Project since I believe It has a superior platform to Ender 3.
 ### How much I learned
