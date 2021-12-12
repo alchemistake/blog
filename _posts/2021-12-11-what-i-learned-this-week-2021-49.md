@@ -34,14 +34,18 @@ I want to make robust home network
 Not that much, documentations are not matching with the OpenWRT 21
 ## Longhorn
 ### What is Longhorn
+kubernetes data thing.
 ### Why do I want to learn it?
 I'm gonna expand my kubernetes cluster it needs decenteralized data storage
 ### How much I learned
 Not much but i got it working
 # Thursday
+?? How can i frame this maybe focus on the hotend.
 ## P3 Steel
 ### What is P3 Steel
+Unkown mark3 clone.
 ### Why do I want to learn it?
+
 ### How much I learned
 # Feedback!
 Thank you for reading. Every quest worths less if you don't tell me how you feel about this content! If you want to chat about a improvement I can do you please let me know at blog@thrideas.com
