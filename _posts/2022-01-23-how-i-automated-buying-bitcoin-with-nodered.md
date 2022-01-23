@@ -1,0 +1,35 @@
+---
+layout: post
+title: How I automated buying bitcoin with Nodered
+date: 2022-01-23 21:27 +0100
+categories: productivity
+tags: finance automation bitcoin
+---
+# Why
+Love or hate it bitcoin is here and people invest in it. I like to invest a small amount of my wage in BTC and index funds to have a steady saving strategy. I watched [a video from Thomas Frank about automatizing finance and saving up](https://www.youtube.com/watch?v=XImly72tLw0) then I realized I should do the same. It was easy to automate buying funds and rainy day account via my bank but I wasn't able to automate how to buy bitcoin via out of the box tools.
+
+# Issue 1: My bank does not do recurring payments to out of country.
+I use Kraken to buy bitcoin which operates at Germany but I live in Norway. My bank does not do recurring payments for international money sending. I technically didn't solved the problem but it is good enough.
+
+I realized that every 6 months I check in and decide what amount to invest. I decided to sit every 6 months and set up the payments manually. It takes almost 15 minutes to set up. Thus I do the verification and filling the form dance at once. Which wastes less time compared to manually sending.
+
+# Issue 2: Kraken does not do recurring actions.
+This was the bigger issue. Since I couldn't set up buy actions in advance since I couldn't predict prices and ranges _etc_. But thankfully Kraken gives full access APIs. I decided to use my home server and Nodered to buy whenever money enters my Kraken account.
+
+I installed Nodered back when I decided to do some basic automations but I didn't get around doing a useful one. When the problem arised, I was ready with my installed copy of Nodered waiting in my homeserver. I started with finding what should I do to talk with Kraken API. A quick google search showed a Nodered plugin called [node-red-contrib-kraken](https://flows.nodered.org/node/node-red-contrib-kraken), which enables Nodered to talk with Kraken API.
+
+My algorithm is simple and stupid. Every day, I check my Kraken account's Euro amount and if it is higher than 10€ I check the current price of BTC. Then I send a order with all of my money on the account. Due to some rounding errors and prices, I can have around 2-3€ after transaction. So I decided 10€ as the cut off point. I can do a better price calculation with some JS code but I'm currently lazy, maybe ill come around doing it.
+
+<img src="/assets/2022-01-23-how-i-automated-buying-bitcoin-with-nodered/flow.png" width="100%" style="display:block;margin-left:auto;margin-right:auto;"/>
+
+_sorry for shitty image i need to fix my blog css, and better plugins for centering text and legends etc_
+
+<details>
+  <summary>You can find my flow here:</summary>
+  {% highlight json %}
+  [{"id":"17960a6.c2865f6","type":"tab","label":"Kraken BTC","disabled":false,"info":""},{"id":"bbe5b70c.a46f78","type":"kraken-api","z":"17960a6.c2865f6","client":"a18c48aa.64a418","method":"private/AddOrder","name":"Buyer","x":1390,"y":220,"wires":[["7500357.ea383cc"]]},{"id":"7500357.ea383cc","type":"debug","z":"17960a6.c2865f6","name":"General Debug","active":true,"tosidebar":true,"console":false,"tostatus":false,"complete":"true","targetType":"full","statusVal":"","statusType":"auto","x":1620,"y":380,"wires":[]},{"id":"d168c1a1.802de","type":"kraken-api","z":"17960a6.c2865f6","client":"a18c48aa.64a418","method":"private/Balance","name":"","x":440,"y":180,"wires":[["5eba385c.cd38a8"]]},{"id":"c0b355f5.c5cd18","type":"inject","z":"17960a6.c2865f6","name":"Get Balance","props":[{"p":"payload"}],"repeat":"","crontab":"00 18 * * *","once":false,"onceDelay":0.1,"topic":"","payload":"{}","payloadType":"json","x":240,"y":180,"wires":[["d168c1a1.802de"]]},{"id":"19eae063.064fe","type":"switch","z":"17960a6.c2865f6","name":"is Deposit Complete","property":"payload","propertyType":"msg","rules":[{"t":"gt","v":"10","vt":"str"}],"checkall":"true","repair":false,"outputs":1,"x":760,"y":180,"wires":[["5f3b50b9.7ad61","15dd8b9b.2c2c54"]]},{"id":"3c65625a.b438ee","type":"change","z":"17960a6.c2865f6","name":"🔨 Order params","rules":[{"t":"set","p":"payload.pair","pt":"msg","to":"XXBTZEUR","tot":"str"},{"t":"set","p":"payload.type","pt":"msg","to":"buy","tot":"str"},{"t":"set","p":"payload.ordertype","pt":"msg","to":"limit","tot":"str"},{"t":"set","p":"payload.price","pt":"msg","to":"$formatNumber($number(msg.payload.price), \"######.0\")","tot":"jsonata"},{"t":"set","p":"payload.volume","pt":"msg","to":"$string($number(msg.payload.balance) / $number(msg.payload.price))","tot":"jsonata"},{"t":"delete","p":"payload.balance","pt":"msg"}],"action":"","property":"","from":"","to":"","reg":false,"x":1190,"y":220,"wires":[["bbe5b70c.a46f78","7500357.ea383cc"]]},{"id":"45f6e5ec.f9315c","type":"kraken-api","z":"17960a6.c2865f6","client":"a18c48aa.64a418","method":"public/Ticker","name":"Price","x":610,"y":240,"wires":[["4c7db34e.e1022c"]]},{"id":"15dd8b9b.2c2c54","type":"change","z":"17960a6.c2865f6","name":"Price BTC EUR","rules":[{"t":"set","p":"payload","pt":"msg","to":"{}","tot":"json"},{"t":"set","p":"payload.pair","pt":"msg","to":"XBTEUR","tot":"str"}],"action":"","property":"","from":"","to":"","reg":false,"x":460,"y":240,"wires":[["45f6e5ec.f9315c"]]},{"id":"5eba385c.cd38a8","type":"change","z":"17960a6.c2865f6","name":"Cleanup","rules":[{"t":"set","p":"topic","pt":"msg","to":"balance","tot":"str"},{"t":"set","p":"payload","pt":"msg","to":"payload.ZEUR","tot":"msg"}],"action":"","property":"","from":"","to":"","reg":false,"x":580,"y":180,"wires":[["19eae063.064fe"]]},{"id":"4c7db34e.e1022c","type":"change","z":"17960a6.c2865f6","name":"Cleanup","rules":[{"t":"set","p":"topic","pt":"msg","to":"price","tot":"str"},{"t":"set","p":"payload","pt":"msg","to":"payload.XXBTZEUR.c[0]","tot":"msg"},{"t":"set","p":"complete","pt":"msg","to":"true","tot":"bool"}],"action":"","property":"","from":"","to":"","reg":false,"x":760,"y":240,"wires":[["5f3b50b9.7ad61"]]},{"id":"5f3b50b9.7ad61","type":"join","z":"17960a6.c2865f6","name":"Pair","mode":"custom","build":"object","property":"payload","propertyType":"msg","key":"topic","joiner":"\\n","joinerType":"str","accumulate":false,"timeout":"","count":"","reduceRight":false,"reduceExp":"","reduceInit":"","reduceInitType":"num","reduceFixup":"","x":1030,"y":220,"wires":[["3c65625a.b438ee"]]},{"id":"1c966fb9.67df2","type":"comment","z":"17960a6.c2865f6","name":"","info":"maybe better idea to use avg `p` vs current `c` to decide is better than low. check up next month","x":720,"y":320,"wires":[]},{"id":"a18c48aa.64a418","type":"kraken-api-config","name":"Kraken API Key"}]
+  {% endhighlight %}
+</details>
+
+# Issue 3: Pulling my BTC when there is enough money.
+I store my BTC on a Ledger Nano X and usually I take my money out of Kraken when there is enough. I didn't automate it fear of getting hacked (connecting your wallet to internet is a bad idea.), but I'm planning to add a e-mail notification when I have enough BTC on my account.
