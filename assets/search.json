@@ -1,6 +1,13 @@
 [
   
     {
+      "title"    : "So I tried to make tiktoks everyday...",
+      "tags"     : "content",
+      "url"      : "//log/2022/01/28/so-I-tried-to-make-tiktoks-everyday.html",
+      "date"     : "2022-01-28 22:24:00 +0100"
+    } ,
+  
+    {
       "title"    : "How I automated buying bitcoin with Nodered",
       "tags"     : "finance, automation, bitcoin",
       "url"      : "//productivity/2022/01/23/how-i-automated-buying-bitcoin-with-nodered.html",
@@ -17,7 +24,7 @@
     {
       "title"    : "What I learned this week? 2021#49",
       "tags"     : "learning",
-      "url"      : "//productivity/2021/12/12/what-i-learned-this-week-2021-49.html",
+      "url"      : "//log/2021/12/12/what-i-learned-this-week-2021-49.html",
       "date"     : "2021-12-12 20:16:00 +0100"
     } ,
   
