@@ -2,7 +2,7 @@
 layout: post
 title: What I learned this week? 2021#49
 date: 2021-12-12 20:16 +0100
-categories: productivity
+categories: log
 tags: learning
 ---
 # Monday
