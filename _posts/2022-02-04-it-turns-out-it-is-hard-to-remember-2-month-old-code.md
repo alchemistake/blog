@@ -2,18 +2,15 @@
 layout: post
 title: It turns out it is hard to remember 2 month old code
 date: 2022-02-04 22:21 +0100
-categories: log
-tags: animation-gan
+categories: animation-transformer
+tags: machine-learning code
 ---
-* premise of animation gan
-  * 
-* explain the time gap
-* explain the plan of attack
-* explain why you wasted a day on ready made code
-    * multi dimensional vector
-* explain retracing of the papers
-* explain attributed paper required edits/update
-    * explain why my setup lacks torch etc.
-        * wsl cuda vs native cuda
-          * [Last time I was trying to train anything,]({% post_url 2021-12-11-what-i-learned-this-week-2021-49 %}#tuesday) I tried to use WSL since I'm more familiar with Linux, it turns out it was a mistake. Long story short if you install a special driver it gives you CUDA powers on WSL but the catch is if you have a G-SYNC enabled monitor connected there are some glitches that causes horrible stuff like frame drops and intermittent green screen. Even if WSL is not up the problems continue. Rather than having system-wide problems I decided to switch to the windows' python. Thus i needed to re-download and install everything from driver to torch package.
-* explain current breaking situation.
+So I have a theory that tranformers can be used to generate 3D Animations since language and animation. Main difference is NLP Tranformers are designed with classification and distinct tokens and 3D animations work with continous numbers. So It requires some conversion even before I experiment and see whether it will work or not. I started working on this around last december on and off. I started with re-learning the basics and reading some papers on the topic. As the new year starts I decided focus on actively rather than beating around the bush.
+
+I thought I must not be the only guy thinking of the same thing and I found there are some examples of conversion to work with timeseries, and technically 3D animations are timeseries of composite angles. I found some examples online. Nothing was documented clearly but it can be a good point to start, if I can cut the corners I will since I only have 3 hours every day, more or less. I started with experimenting with [the project that has best documentation.](https://github.com/maxjcohen/transformer)
+
+In the middle of the work I realized they stripped out the parts I want to keep and added their own implementation. Then, I just realized I figured the same thing 2 months ago, too. Due to their implementation differences, my data was not fitting at all. After deciding, out of the github box implementations are not fitting me, I decided to do it myself. I revised my notes on the papers. Rather than re-implementing tranformer part of the code I used [annoted version of "Attention is All You Need" paper](http://nlp.seas.harvard.edu/2018/04/03/attention.html) as a starting ground. Of course it came with it's own problems.
+
+My computer didn't have torch or anything installed because [last time I was trying to train anything,]({% post_url 2021-12-11-what-i-learned-this-week-2021-49 %}#tuesday) I tried to use WSL since I'm more familiar with Linux, it turns out it was a mistake. Long story short: if you install a special driver that gives you CUDA powers on WSL and if you have a G-SYNC enabled monitor connected there are some glitches that causes horrible stuff like frame drops and intermittent green flashes. Even if WSL is not actively running, the problems continue. Rather than having system-wide problems I decided to switch to the windows' python. Thus i needed to re-download and install everything from driver to torch package. It used an outdated version of pytorch (which might not be outdated at the time of release) and it was not available for Windows, so I spent sometime porting the code to latest pytorch version. Thankfully, it was straight forward and fast.
+
+So that wasted almost all the time I have for this week, I decided to adapt old facebook addage: “Move fast and break things.” I decided to convert just a tiny part of the code and try to run it. Of course everything starts to give error. So I fix those until everything is converted to work with numbers. I'm not done with that conversion cycle, yet. When it is ready we will see whether the theory will work or not.
