@@ -1,108 +1,115 @@
 [
   
     {
+      "title"    : "Optimization",
+      "tags"     : "learning, optimization",
+      "url"      : "//log/2022/02/27/optimization.html",
+      "date"     : "2022-02-27 16:05:00 +0300"
+    } ,
+  
+    {
       "title"    : "Time is a currency",
       "tags"     : "machine-learning, code",
       "url"      : "//animation-transformer/2022/02/19/time-is-a-currency.html",
-      "date"     : "2022-02-19 13:47:00 +0100"
+      "date"     : "2022-02-19 15:47:00 +0300"
     } ,
   
     {
       "title"    : "Nothing Happened",
       "tags"     : "machine-learning, code",
-      "url"      : "//animation-transformer/2022/02/13/nothing-happened.html",
-      "date"     : "2022-02-13 23:28:00 +0100"
+      "url"      : "//animation-transformer/2022/02/14/nothing-happened.html",
+      "date"     : "2022-02-14 01:28:00 +0300"
     } ,
   
     {
       "title"    : "It turns out it is hard to remember 2 month old code",
       "tags"     : "machine-learning, code",
-      "url"      : "//animation-transformer/2022/02/04/it-turns-out-it-is-hard-to-remember-2-month-old-code.html",
-      "date"     : "2022-02-04 22:21:00 +0100"
+      "url"      : "//animation-transformer/2022/02/05/it-turns-out-it-is-hard-to-remember-2-month-old-code.html",
+      "date"     : "2022-02-05 00:21:00 +0300"
     } ,
   
     {
       "title"    : "So I tried to make tiktoks everyday...",
       "tags"     : "content",
-      "url"      : "//log/2022/01/28/so-I-tried-to-make-tiktoks-everyday.html",
-      "date"     : "2022-01-28 22:24:00 +0100"
+      "url"      : "//log/2022/01/29/so-I-tried-to-make-tiktoks-everyday.html",
+      "date"     : "2022-01-29 00:24:00 +0300"
     } ,
   
     {
       "title"    : "How I automated buying bitcoin with Nodered",
       "tags"     : "finance, automation, bitcoin",
       "url"      : "//productivity/2022/01/23/how-i-automated-buying-bitcoin-with-nodered.html",
-      "date"     : "2022-01-23 21:27:00 +0100"
+      "date"     : "2022-01-23 23:27:00 +0300"
     } ,
   
     {
       "title"    : "Mini Game Preview Mega Collection",
       "tags"     : "preview, review",
       "url"      : "//gaming/2022/01/02/mini-game-preview-mega-collection.html",
-      "date"     : "2022-01-02 21:35:00 +0100"
+      "date"     : "2022-01-02 23:35:00 +0300"
     } ,
   
     {
       "title"    : "What I learned this week? 2021#49",
       "tags"     : "learning",
       "url"      : "//log/2021/12/12/what-i-learned-this-week-2021-49.html",
-      "date"     : "2021-12-12 20:16:00 +0100"
+      "date"     : "2021-12-12 22:16:00 +0300"
     } ,
   
     {
       "title"    : "2022 Plans and Goals",
       "tags"     : "plans",
       "url"      : "//productivity/2021/12/04/2022-plans-and-goals.html",
-      "date"     : "2021-12-04 20:15:00 +0100"
+      "date"     : "2021-12-04 22:15:00 +0300"
     } ,
   
     {
       "title"    : "A Makeshift Home Server",
       "tags"     : "hardware",
       "url"      : "//home-server/2021/11/28/a-makeshift-home-server.html",
-      "date"     : "2021-11-28 21:05:00 +0100"
+      "date"     : "2021-11-28 23:05:00 +0300"
     } ,
   
     {
       "title"    : "50 Pages Review #2: How Luck Happens",
       "tags"     : "50pages",
       "url"      : "//books/2021/11/20/50-pages-review-2-how-luck-happens.html",
-      "date"     : "2021-11-20 16:16:00 +0100"
+      "date"     : "2021-11-20 18:16:00 +0300"
     } ,
   
     {
       "title"    : "One of those weeks",
       "tags"     : "networking",
       "url"      : "//home-server/2021/11/14/one-of-those-weeks.html",
-      "date"     : "2021-11-14 17:46:00 +0100"
+      "date"     : "2021-11-14 19:46:00 +0300"
     } ,
   
     {
       "title"    : "A peculiar case of a home networking",
       "tags"     : "networking",
       "url"      : "//home-server/2021/11/06/a-peculiar-case-of-a-home-networking.html",
-      "date"     : "2021-11-06 00:00:00 +0100"
+      "date"     : "2021-11-06 00:00:00 +0300"
     } ,
   
     {
       "title"    : "Fixing my game addiction",
       "tags"     : "productivity",
       "url"      : "//productivity/2021/11/05/fixing-my-game-addiction.html",
-      "date"     : "2021-11-05 01:00:00 +0100"
+      "date"     : "2021-11-05 03:00:00 +0300"
     } ,
   
     {
       "title"    : "50 Pages Review #1: Bullshit Jobs",
       "tags"     : "50pages",
       "url"      : "//books/2021/10/29/50-pages-review-1-bullshit-jobs.html",
-      "date"     : "2021-10-29 00:00:00 +0200"
+      "date"     : "2021-10-29 00:00:00 +0300"
     } ,
   
     {
       "title"    : "Ultimate Guide to Octo4a",
       "tags"     : "octo4a, octoprint",
       "url"      : "//3d-printing/2021/10/10/ultimate-guide-to-octo4a.html",
-      "date"     : "2021-10-10 00:00:00 +0200"
+      "date"     : "2021-10-10 00:00:00 +0300"
     } 
   
 ]
