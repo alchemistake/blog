@@ -65,37 +65,19 @@ Uygulamanın yeni bir versiyonu çıktığında veya herhangi bir şekilde telef
 
 You can get FTP Server on [Google Play](https://play.google.com/store/apps/details?id=net.xnano.android.ftpserver&hl=en&gl=US) or use a Trusted APK file. There is very similar apps with very similar names. Whichever one works on your phone is fine.
 
-# Robust Backup System
-Nothing is forever. If your phone breaks down or something happens to octo4a files, it is hustle to set up a new instance from strach. Therefore everyone in earth needs to backup everything. There is a magical 2 step process that makes backups automatic.
+# Güçlü Yedekleme Sistemi
+Hiç birşey ebedi değildir. Birgün telefonunuz arızalandığında, herşeyi tek tek tekrar kurmanız başınızı çok ağrıtacaktır. Eşeği sağlam yere bağlamak için düzgün bir yedekleme sistemi kurmak şart. 2 kolay adımda çok güzel bir yedekleme sistemi kurabilirsiniz.
 
-First Step: You should install this Octoprint plugin called [Backup Scheduler](https://plugins.octoprint.org/plugins/backupscheduler/) This will backup your octoprint settings and plugins automatically to the your device. But saving to your device is not enough. You need to put your backups outside of the device itself.
+Adım 1: [Backup Scheduler](https://plugins.octoprint.org/plugins/backupscheduler/) isimli Octoprint eklentisini kurun. Bu eklenti otomatik olarak yedeklerinizi alacaktır. Ama bu yedekler yeterli değil. Çünkü bu yedeklerinizi ikinci bir yerde bulundurmazsanız, aletiniz bozulunca bu yedekler de bozulcaktır.
 
-Second Step: There is this app called [Folder Sync](https://play.google.com/store/apps/details?id=dk.tacit.android.foldersync.lite&hl=en&gl=US) that I love! You can install and the follow instructions on the app to connect it to huge list of cloud storage providers. Then you can create a Folder pair to upload your backups to those could storage providers. Here is my settings:
+Adım 2: [Folder Sync](https://play.google.com/store/apps/details?id=dk.tacit.android.foldersync.lite&hl=en&gl=US) isimli uygulamayı kuruyoruz. Bu uygulamayı kullanarak bir çok bulut depolama sistemine bağlanabilirsiniz. İstediğiniz depolama sistemini seçip bir Dosya Grubu (Folder Pair) oluşturabilirsiniz.
+Kullandığım Ayarlar Şöyle:
 * Sync type: to Remote Folder.
-* Local Folder: `/storage/emulated/0/Android/data/com.octo4a/files/.octoprint/data/backup` This folder location might be different for you depending on where you installed your Octo4a app. Try to find a folder called `Android` and then follow the rest of the path from there.
-* Scheduled sync is enabled.
-* Schedule is every 12 hours. 24 is ok but I'm paranoid.
-* I disabled notifications.
-* Rest of the setup is default.
+* Local Folder: `/storage/emulated/0/Android/data/com.octo4a/files/.octoprint/data/backup` Bu dosya başka sizin telefonunuz için bir yerde olabilir. `Android` dosyasını bulduktan sonrası genellikle aynıdır.
+* Scheduled sync ayarı açık.
+* Schedule ayarını her 12 saat yapmanız tavsiye ediyorum. Genelde 24 saat yeterli ama ben biraz daha temkinli olmayı seviyorum.
+* Bildirimler kapalı.
+* Geri kalan bütün ayarlar kutudan çıktığı gibi.
 
-Technically you can install [Google Drive access directly inside the Octoprint](https://plugins.octoprint.org/plugins/googledrivebackup/) but it required more setup and fiddling than installing the android application. If that version works and easier for you please notify me.
-
-# (Optional) Tasker
-Due to my phone being half fried, signals drops randomly. Thus whenever Wifi drops, I need to re-enable my Camera and ZeroTier apps all the time. To automate this part I installed Tasker to re-enable them automatically whenever they are disconnected.
-
-To achieve this I installed Tasker, IP Webcam Pro, and AutoInput. IP Webcam Pro has tasker integration so I can enable camera with that integration. AutoInput is used for opening ZeroTier App and flicking the enable disable button.
-
-If people are insterested I can write another post about Tasker and how to set that up.
-
-# Future Extensions
-## Klipper
-I never used klipper, so i didn't tried to get it done. It seems like people are having some problems but I have 100% everything will iron out in short time.
-
-## The Spagetti Detective
-I tried to get TSD working. It didn't I really don't know why. But I don't need it right now so I'm just calling it a day. I think the problem is with my TSD server so I will address that later.
-
-## Automized Deployment.
-I think I have a high chance of my phone dying in a year or so and usually I'm lazy to setup everything manually. I believe I can cobble together a Ansible like program to install all the applications mentioned and even do the initial setup of them. I'm not doing it right now but wait until my phone breaks down.
-
-# Feedback!
-Thank you for reading. Posts worth less if you don't tell me how you feel about this content! If you want to chat about a improvement I can do you please let me know at blog@thrideas.com
+# Geri Bildirim!
+Okuduğunuz için teşekkür ederim. Yorumlarınızı veya düzeltmelerinizi blog@thrideas.com adresinden yollayabilirsiniz.
